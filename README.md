@@ -1,16 +1,19 @@
-Clone this repo to your system.
+## Uploading with addresses and processing the Excel file and get lat lang values
 
-Create a virtual environment and activate it.
+- Clone this repo to your system.
 
-Install the dependencies using pip install -r requirement.txt.
+- Create a virtual environment and activate it.
 
-Start the python server, python manage.py runserver.
+- Install the dependencies using `pip install -r requirement.txt`.
 
-Go to localhost:8000 and upload the address-sample-data.xlsx file.
+- Start the python server, `python manage.py runserver`.
 
-If your provided data is correct the download will happen with the following details
+- Go to `localhost:8000` and upload the `address-sample-data.xlsx` file.
 
-Address
-Formatted address
-Latitude
-Longitude
+- If your provided data is correct the download will happen with the following details
+	- Address
+	- Formatted address
+	- Latitude
+	- Longitude
+
+

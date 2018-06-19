@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>
+            Excel file upload and processing : Django Example : ThePythonDjango.Com
+        </title>
+        <link rel="stylesheet" type="text/css" href="{{static}}css/style.css">
+    </head>
+    <body>
+      <div class="form-body">
+        <div class="error">{{ error }}</div>
+        <form action="{% url "myapp:index" %}" method="post" enctype="multipart/form-data" onsubmit="return checkFormSubmit();">
+            {% csrf_token %}
+            <label>Attach File</label>
+            <input type="file" title="Upload excel file" name="excel_file" required="required" class="input-file" onchange="checkFileExt(this)">
+            <div class="upload-hint">
+              <p>(Supports only .xlxs &amp; xls format)</p>
+              <p style=""><a href="{{static}}address-sample-data.xlsx" download>Click Here</a>&nbsp;to download the sample excel template</p>
+            </div>
+            <input type="submit" value="Convert LatLang & Download" class="input-submit">
+        </form>
+      </div>
+        <script src="{{static}}js/upload.js"></script>
+    </body>
+</html>
